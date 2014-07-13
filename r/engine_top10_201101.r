@@ -1,7 +1,7 @@
 
-png(file="temp/201101wp.png", bg="white", width=660, height=480)
+png(file="201101wp.png", bg="white", width=660, height=480)
 
-## Óñ²ñ¡¢Ò»Æû¼¯ÍÅ¡¢Î«²ñ¡¢È«²ñ¡¢¡¢¶«·çÆû³µ¡¢ÖÐ¹úÖØÆû¡¢¶«·ç³¯²ñ¡¢É½¶«À³¶¯ºÍ½­Î÷½­Áå²ñÓÍ»úÃûÁÐ²ñÓÍ»ú²úÁ¿ÅÅÃûµÄÇ°Ê®Î»£¬²úÁ¿·Ö±ðÎª74194Ì¨¡¢49653Ì¨¡¢48671Ì¨¡¢42008Ì¨¡¢31364Ì¨¡¢29332Ì¨¡¢22181Ì¨¡¢22162Ì¨¡¢21605Ì¨ºÍ18157Ì¨
+## çŽ‰æŸ´ã€ä¸€æ±½é›†å›¢ã€æ½æŸ´ã€å…¨æŸ´ã€ã€ä¸œé£Žæ±½è½¦ã€ä¸­å›½é‡æ±½ã€ä¸œé£ŽæœæŸ´ã€å±±ä¸œèŽ±åŠ¨å’Œæ±Ÿè¥¿æ±Ÿé“ƒæŸ´æ²¹æœºååˆ—æŸ´æ²¹æœºäº§é‡æŽ’åçš„å‰åä½ï¼Œäº§é‡åˆ†åˆ«ä¸º74194å°ã€49653å°ã€48671å°ã€42008å°ã€31364å°ã€29332å°ã€22181å°ã€22162å°ã€21605å°å’Œ18157å°
 
 x.value <- c(7.4194,4.9653,4.8671,4.2008,3.1364,2.9332,2.2181,2.2162,2.1605,1.8157)
 
@@ -14,27 +14,27 @@ total <- 0
 
 for( x in x1.value)
 {
-	total <- total + x
-
+  total <- total + x
+  
 }
 
 for( x in x1.value)
 {
-	t <- t + 100*x/total
-	x2[i] <- t
-	i <- i+1
+  t <- t + 100*x/total
+  x2[i] <- t
+  i <- i+1
 }
 ##lines();
 ##x1.name <- x.name
 ##xp <- c(32,60,8,21,74,4,65,7,1,71,33,29,4,5,8,30,8,14,13,5,43,3,0,17,-1)
 
 barplot(x1.value,ylim=c(0,max(x1.value)),offset = 0,col=rainbow(18),
-
-names=c("Óñ²ñ", "Ò»Æû\n¼¯ÍÅ", "Î«²ñ", "È«²ñ", "ÔÆÄÚ\n¶¯Á¦", "¶«·ç\nÆû³µ", "ÖÐ¹ú\nÖØÆû", "¶«·ç\n³¯²ñ", "É½¶«\nÀ³¶¯", "½­Î÷½­Áå\n²ñÓÍ»ú"),
-
-xlab="³§ÉÌ",
-ylab="²úÁ¿£¨ÍòÌ¨£©",
-tcl=0.5
+        
+        names=c("çŽ‰æŸ´", "ä¸€æ±½\né›†å›¢", "æ½æŸ´", "å…¨æŸ´", "äº‘å†…\nåŠ¨åŠ›", "ä¸œé£Ž\næ±½è½¦", "ä¸­å›½\né‡æ±½", "ä¸œé£Ž\næœæŸ´", "å±±ä¸œ\nèŽ±åŠ¨", "æ±Ÿè¥¿æ±Ÿé“ƒ\næŸ´æ²¹æœº"),
+        
+        xlab="åŽ‚å•†",
+        ylab="äº§é‡ï¼ˆä¸‡å°ï¼‰",
+        tcl=0.5
 )
 
 
@@ -48,9 +48,8 @@ box()
 abline(h = 100*0.8, col ="red")
 lines(x2, col = "blue", lty = 1, type="o")
 
-title(main = "2011Äê1ÔÂÖÐ¹ú²ñÓÍ»úÆóÒµ²úÁ¿ÅÅÃû", col.main = "black", col.lab = gray(0.8), cex.main = 1.2, cex.lab = 1, font.main = 4, font.lab = 3)
+title(main = "2011å¹´1æœˆä¸­å›½æŸ´æ²¹æœºä¼ä¸šäº§é‡æŽ’å", col.main = "black", col.lab = gray(0.8), cex.main = 1.2, cex.lab = 1, font.main = 4, font.lab = 3)
 
 
 dev.off()
-
 

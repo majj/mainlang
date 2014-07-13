@@ -1,10 +1,10 @@
 
 
 
-png(file="temp/Rbar01.png", bg="white", width=780, height=560)
+png(file="output/Rbar01.png", bg="white", width=780, height=560)
 
 x.value <- c(167, 22,14,13,0, 0 )
-#x.name <-c("å¾…é—®","æµ¦ä¸œ","å“ç®¡","çŸ³è†ä»£åž‹","èœ¡åž‹åŒ…åŸ‹","CAPTEKèœ¡åž‹","é‡‘å±žæ‰“ç£¨","OP","å…¨ç“·å†…å† ","å †ç²‰ç»„","è½¦ç“·ç»„","ä¸Šé‡‰ç»„","æŠ›å…‰ç»„","éšä¹‰æ‰“ç£¨","é’¢æ‰˜è®¾è®¡","é’¢æ‰˜å¤æ¨¡","é’¢æ‰˜èœ¡åž‹","é’¢æ‰˜åŒ…åŸ‹","é’¢æ‰˜çƒ§é“¸","å†·å¼¯","æŽ’ç‰™/èœ¡åž‹","è£…ç…®","æŽ’ç‰™æ‰“ç£¨","æŽ’ç‰™æŠ›å…‰","éšä¹‰å¤æ¨¡")
+#x.name <-c("´ýÎÊ","ÆÖ¶«","Æ·¹Ü","Ê¯¸à´úÐÍ","À¯ÐÍ°üÂñ","CAPTEKÀ¯ÐÍ","½ðÊô´òÄ¥","OP","È«´ÉÄÚ¹Ú","¶Ñ·Û×é","³µ´É×é","ÉÏÓÔ×é","Å×¹â×é","ÒþÒå´òÄ¥","¸ÖÍÐÉè¼Æ","¸ÖÍÐ¸´Ä£","¸ÖÍÐÀ¯ÐÍ","¸ÖÍÐ°üÂñ","¸ÖÍÐÉÕÖý","ÀäÍä","ÅÅÑÀ/À¯ÐÍ","×°Öó","ÅÅÑÀ´òÄ¥","ÅÅÑÀÅ×¹â","ÒþÒå¸´Ä£")
 
 x1.value <- sort(x.value,decreasing = TRUE)
 x2 <- x1.value
@@ -39,9 +39,9 @@ lines(x2, col = "blue", lty = 1, type = "o")
 
 
 #text(x1.value, labels=(x1.name))
-#title(main = "æŽ’åˆ—å›¾", xlab = "--", col.main = "blue", col.lab = gray(0.8), cex.main = 1.2, cex.lab = 1, font.main = 4, font.lab = 3)
+#title(main = "ÅÅÁÐÍ¼", xlab = "--", col.main = "blue", col.lab = gray(0.8), cex.main = 1.2, cex.lab = 1, font.main = 4, font.lab = 3)
 
-#legend("topright", c("WIP", "æ ‡å‡†äº§èƒ½",), col = c(3,4), text.col = "green4", lty = c(2, 1), pch = c(4,1), merge = TRUE, bg = 'gray90')
+#legend("topright", c("WIP", "±ê×¼²úÄÜ",), col = c(3,4), text.col = "green4", lty = c(2, 1), pch = c(4,1), merge = TRUE, bg = 'gray90')
 
 dev.off()
 # 114,74, 148, 570 / 155 127  188, 570
