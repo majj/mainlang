@@ -1,3 +1,6 @@
+
+# Erlang
+
 .eunit
 deps
 *.o
@@ -7,5 +10,11 @@ erl_crash.dump
 
 output
 
-#Ｒ
+# R
 *.Rout
+
+# Go
+*.exe
+
+# Python
+*.pyc

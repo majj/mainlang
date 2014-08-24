@@ -1,3 +1,4 @@
+%% coding: utf8
 
 -module(calc01).
 
@@ -21,16 +22,16 @@ test() ->
 
 	for(5500),
 	
-	%io:format('~s~n',['ÄãºÃ']),
+	%io:format('~s~n',['hello']),
 	
 	{ok,'test it'}.
 	
 main(_)->
 
-	timer:second(),
+	%timer:second(),
 	
-	{_, M}  = test().
-	%io:format('~s ~n',[M]).
+	{_, M}  = test(),
+	io:format('~s ~n',[M]).
 	
 	%{_, N} = test(),
 	%io:format('again: ~s ~n',[N]).

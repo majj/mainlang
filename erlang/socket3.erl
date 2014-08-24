@@ -33,11 +33,12 @@ loop(Socket) ->
     receive
 	{tcp, Socket, Bin} ->
 	    io:format("[~w]Server received binary = ~p~n", [self(),Bin]),
+	    %io:format("[~w]~n",binary_to_integer(Bin)),
 	    %Val = binary_to_integer(Bin),
 	    %io:format("Server (unpacked) ~p~n",[Val]),
 	    %Reply = "1,Mabo", %% Val*Val, %% lib_misc:string2value(Str),
 	    %io:format("Server replaying = ~p~n",[Reply]),
-	    gen_tcp:send(Socket, "Reply\n"),
+	    gen_tcp:send(Socket, "Reply~n"),
 	    loop(Socket);
 	{tcp_closed, Socket} ->
 	    io:format("Server socket closed~n")

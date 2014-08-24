@@ -22,9 +22,9 @@ loop(Socket) ->
     receive
 	{tcp, Socket, Bin} ->
 	    io:format("Server received binary = ~p~n", [Bin]),
-	    Str = binary_to_term(Bin),
-	    io:format("Server (unpacked) ~p~n",[Str]),
-	    Reply = Str, %% lib_misc:string2value(Str),
+	    %Str = binary_to_term(Bin),
+	    %io:format("Server (unpacked) ~p~n",[Str]),
+	    Reply = Bin, % Str, %% lib_misc:string2value(Str),
 	    io:format("Server replaying = ~p~n",[Reply]),
 	    gen_tcp:send(Socket, term_to_binary(Reply)),
 	    loop(Socket);
