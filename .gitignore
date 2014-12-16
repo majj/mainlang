@@ -12,6 +12,7 @@ output
 
 # R
 *.Rout
+.Rhistory
 
 # Go
 *.exe
