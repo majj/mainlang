@@ -1,10 +1,11 @@
 
 
-# library("rjson", lib.loc="e:/MTP/R/R-3.1.1/library")
+library("rjson")
 
 sayHello<-function(name){
     print(paste("Hello",name))
 }
 
 sayHello("Foton")
-sayHello("SGM")
+
+json_data <- fromJSON(paste(readLines("r1.json"), collapse=""))

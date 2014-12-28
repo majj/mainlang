@@ -13,9 +13,14 @@ output
 # R
 *.Rout
 .Rhistory
+*.png
+*.svg
+*.pdf
+*.zip
 
 # Go
 *.exe
 
 # Python
 *.pyc
+
