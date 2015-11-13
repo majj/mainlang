@@ -1,11 +1,11 @@
 
 -module(mabo_timer).
 
--export([start/1, s2/1]).
+-export([start/1, s2/1, s3/1]).
 
 start(T) ->
     Pid = spawn( fun info/0 ),
-    spawn( fun()-> timer(T, Pid) end ).
+    spawn( fun()-> timer1(T, Pid) end ).
 
 s2(T) ->
     %% Pid = spawn( fun info/0 ),
@@ -16,29 +16,32 @@ info() ->
     receive 
 	_ ->
        
-    	    io:format("~w~n",[os:timestamp()]),
-	    io:format("t~n"),
+        
+	    %% io:format("t~n"),
 	    info()
     end.
 
-timer(T, Pid) ->
+timer1(T, Pid) ->
     
     receive
 	_ ->
 	    io:format("done")
-    after T-8 ->
+    after T-17 ->
 	    
             %% spawn(fun info/0),
+            io:format("~w~n",[os:timestamp()]),
 	  Pid ! msg,
 
 	  
 
-          timer(T, Pid)
+          timer1(T, Pid)
 	  %% timer:apply_interval(T, mabo_timer,   timer,(T, Pid)
     end.
 
 
-loop(T) ->
+loop(_) ->
     
-    io:format("t~n"),
-    timer:apply_interval(T,loop, [T]).
+    io:format("~w~n",[os:timestamp()]).
+
+s3(T) ->    
+    timer:apply_interval(T,mabo_timer, loop, [T]).

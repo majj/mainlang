@@ -5,7 +5,7 @@ library(ggplot2)
 
 Sys.setlocale("LC_ALL", "C")
 
-f <- function(d){
+monthly_stat_graph <- function(d){
 
     #Sys.getlocale()
     #Sys.setlocale("LC_ALL","Chinese")
@@ -18,7 +18,7 @@ f <- function(d){
 
     print(d)
 
-    plt <- ggplot(data = d, mapping=aes(x=a,y=b), facets=~c1) +
+    plt <- ggplot(data = d, mapping=aes(x=a,y=b)) +
         geom_point(color="#FF851B",shape=0) + 
         geom_line(colour="red") + 
         #geom_bar(stat="identity") +
@@ -32,10 +32,10 @@ f <- function(d){
         ylim(c(80,100)) +
         ggtitle(iconv("2014年设备利用情况","UTF-8","UTF-8")); #iconv
 
-    ggsave(file="plot03.png", width=6, height=3)
+    ggsave(file="plot04.png", width=6, height=3)
 
 }
 
-d <- data.frame(a=c(1:12),  b =100 - abs(15* sin(c(1:12))),  c1=c(rep(c("Odd","Even"),times=6)),  e=c('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+monthly_data <- data.frame(a=c(1:12),  b =100 - abs(15* sin(c(1:12))),  c1=c(rep(c("Odd","Even"),times=6)),  e=c('一月\nJan', 'Feb', 'Mar', 'Apr', 'May', '六月\nJun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 
-f(d)
+monthly_stat_graph(monthly_data)
